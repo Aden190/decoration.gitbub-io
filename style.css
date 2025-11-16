@@ -1,0 +1,145 @@
+/* ==============================
+   STYLE HALAMAN DETAIL PAKET
+   TEMA HITAM MODERN ELEGAN
+   ============================== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #111;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+/* Header / Logo */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+  background-color: #000;
+  border-bottom: 1px solid #333;
+}
+
+.header img {
+  width: 120px;
+}
+
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: #fff;
+}
+
+/* Container utama */
+.detail-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 60px 80px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1b1b1b 100%);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+  margin: 50px auto;
+  width: 85%;
+}
+
+/* Gambar utama */
+.hero-img {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 32px;                /* jarak antar gambar */
+ padding: 60px 20px;
+ background: transparent;
+}
+
+.hero-img img {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background-color: #111;
+}
+.hero-img:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 15px 35px rgba(255,255,255,0.15);
+  z-index: 3;
+}
+.hero-img {
+  flex-direction: column;
+  gap: 16px;
+}
+.hero-img img {
+  width: 80%;
+  height: auto;
+  transform:none
+}
+/* Info paket */
+.detail-info {
+  flex: 1;
+  padding: 10px 30px;
+}
+
+.detail-info h2 {
+  font-size: 34px;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.detail-info h3 {
+  font-size: 22px;
+  color: #aaa;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.detail-info .price {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.detail-info h4 {
+  font-size: 18px;
+  color: #fff;
+  margin-top: 25px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
+
+.detail-info ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.detail-info ul li {
+  padding: 6px 0;
+  color: #ddd;
+  border-bottom: 1px solid #222;
+}
+
+/* Tombol kembali */
+.back-btn {
+  display: inline-block;
+  margin: 40px 80px;
+  padding: 12px 25px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #f8d210;
+  color: #111;
+}

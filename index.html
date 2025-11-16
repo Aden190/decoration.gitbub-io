@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Decoration</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+ 
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+    body {
+      background: linear-gradient(135deg, #ffffff, #f3f3f3);
+      color: #222;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 3rem; z-index: 100;
+    }
+    nav .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: 1px;
+      font-family: 'Playfair Display', serif;
+    }
+    nav ul {display: flex; list-style: none; gap: 1.5rem;}
+    nav a {
+      text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s;
+    }
+    nav a:hover {color: #000;}
+
+    header {
+      padding: 8rem 2rem 5rem;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+      gap: 4rem;
+      background: linear-gradient(to bottom right, #fafafa, #555);
+    }
+    header .text {max-width: 500px;}
+    header h1 {
+      font-size: 2.8rem;
+      color: #000;
+      letter-spacing: 1px;
+      font-family: 'Playfair Display', serif;
+    }
+    header p {margin: 1.2rem 0; color: #555;}
+    header .btn {
+      background: #000; color: #fff; border: none; padding: 0.9rem 1.6rem;
+      border-radius: 4px; cursor: pointer; font-size: 1rem; transition: 0.3s;
+    }
+    header .btn:hover {background: #fff; color: #000; border: 1px solid #000;}
+    header img {
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    section {padding: 5rem 2rem; text-align: center;}
+    section h2 {
+      font-size: 2rem; color: #111; margin-bottom: 1rem; letter-spacing: 1px;
+      font-family: 'Playfair Display', serif;
+    }
+    section p {color: #555; margin-bottom: 2rem;}
+
+    .services, .packages {
+      display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 1.5rem;
+    }
+    .service, .package {
+      background: #fff; border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service:hover, .package:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .service h3, .package h3 {color: #000; margin-bottom: 0.5rem;}
+    .service li::before {content: '• '; color: #000;}
+    .price {font-weight: bold; margin-top: 1rem; color: #111;}
+
+     #gallery {
+      background: linear-gradient(to bottom right, #fafafa, #555);
+      padding: 5rem 2rem;
+     }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      background: linear-gradient(to bottom right, #fafafa, #555);
+      
+      
+    }
+    .gallery img {
+      width: 100%; border-radius: 10px; height: 220px; object-fit: cover;
+      filter: grayscale(40%);
+      transition: transform 0.3s, filter 0.3s;
+    }
+    .gallery img:hover {transform: scale(1.03); filter: grayscale(0);}
+
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 1rem;
+      background: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      width: 300px;
+      transition: all 0.3s;
+    }
+    .contact-item:hover {
+      background: #000;
+      color: #fff;
+    }
+    .contact-item:hover a {color: #fff;}
+    .contact-item img {width: 26px; height: 26px; object-fit: contain;}
+    .contact-item a {
+      text-decoration: none; color: #222; font-weight: 500;
+    }
+
+    footer {
+      text-align: center; padding: 2rem; background: #111; color: #eee;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {display: none;}
+      header {padding-top: 6rem;}
+      header img {width: 100%;}
+    }
+    .detail-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #000;
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .detail-btn:hover {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Kreasiku Decoration</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Layanan</a></li>
+      <li><a href="#gallery">Galeri</a></li>
+      <li><a href="#packages">Paket</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
+    <div class="text">
+      <h1>Kresiku Wedding Decoration</h1>
+      <p>Ciptakan momen pernikahan elegan dan tak terlupakan dengan dekorasi modern dan elegan.</p>
+      <button class="btn" onclick="scrollToSection('contact')">Hubungi Kami</button>
+    </div>
+    <img src="Gambar.webp">
+  </header>
+
+  <section id="services">
+    <h2>Layanan Kami</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Full Venue Decoration</h3>
+        <ul>
+          <li>Backdrop & Arch Elegan</li>
+          <li>Meja & Centerpiece Minimalis</li>
+          <li>Pencahayaan Modern</li>
+        </ul>
+      </div>
+      <div class="service">
+        <h3>Intimate Wedding</h3>
+        <ul>
+          <li>Konsep Sederhana & Stylish</li>
+          <li>Signage Custom</li>
+          <li>Photo Corner Eksklusif</li>
+        </ul>
+      </div>
+      <div class="service">
+        <h3>Outdoor Garden</h3>
+        <ul>
+          <li>Floral Arch Putih</li>
+          <li>Boho Seating</li>
+          <li>Lampu Gantung Estetik</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Galeri</h2>
+    <div class="gallery">
+      <img src="Gambar 7.jpg">
+      <img src="Gambar 6.jpg">
+      <img src="Gambar 5.webp">
+      <img src="Gambar 8.jpg">
+    </div>
+  </section>
+
+  <section id="packages">
+    <h2>Paket Dirumah</h2>
+    <div class="packages">
+      <div class="package">
+        <h3>Paket Bronze</h3>
+        <p>Konsep dekorasi Sesuai Keinginan dan Budget.</p>
+        <a href="paket-bronze.html" class="detail-btn">Lihat Detail</a>
+      </div>
+      <div class="package">
+        <h3>Paket Silver</h3>
+        <p>Dekorasi modern minimalis untuk acara indoor.</p>
+        <a href="paket-silver.html" class="detail-btn">Lihat Detail</a>
+      </div>
+      <div class="package">
+        <h3>Paket Gold</h3>
+        <p>Dekorasi luar ruangan bertema boho & nature.</p>
+        <a href="paket-gold.html" class="detail-btn">Lihat Detail</a>
+      </div>
+    </div>
+  </section>
+  <section id="packages">
+    <h2>Paket DiGedung</h2>
+    <div class="packages">
+      <div class="package">
+        <h3>Paket Bronze</h3>
+        <p>Konsep dekorasi Sesuai Keinginan dan Budget.</p>
+        <a href="paket-bronze.html" class="detail-btn">Lihat Detail</a>
+      </div>
+      <div class="package">
+        <h3>Paket Silver</h3>
+        <p>Dekorasi modern minimalis untuk acara indoor.</p>
+        <a href="paket-silver.html" class="detail-btn">Lihat Detail</a>
+      </div>
+      <div class="package">
+        <h3>Paket Gold</h3>
+        <p>Dekorasi luar ruangan bertema boho & nature.</p>
+        <<a href="paket-gold.html" class="detail-btn">Lihat Detail</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Hubungi Kami</h2>
+    <p>Kami siap membantu mewujudkan pernikahan impianmu dengan desain elegan dan timeless.</p>
+
+    <div class="contact-container">
+      <div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+        <a href="https://www.instagram.com/weddingdecor.id" target="_blank">@crdekorasi</a>
+      </div>
+      <div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a>
+      </div>
+      <div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+        <a href="mailto:weddingdecor.id@gmail.com">rianfebriansyah@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Cr.Decoration — Elegant & Minimalist Wedding Design
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+    }
+  </script>
+</body>
+</html>
