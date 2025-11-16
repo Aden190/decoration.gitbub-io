@@ -143,3 +143,79 @@ body {
   background-color: #f8d210;
   color: #111;
 }
+@media (max-width: 768px) {
+
+  /* Header */
+  .header {
+    padding: 18px 20px;           /* Diperkecil */
+  }
+
+  .header img {
+    width: 75px;                  /* Logo mengecil */
+  }
+
+  .header h1 {
+    font-size: 17px;              /* Judul mengecil */
+  }
+
+  /* Container utama */
+  .detail-container {
+    flex-direction: column;       /* Dari 2 kolom → 1 kolom */
+    width: 92%;
+    padding: 25px 20px;
+    gap: 25px;
+    margin: 25px auto;
+    border-radius: 12px;
+  }
+
+  /* Gambar utama */
+  .hero-img {
+    padding: 10px 10px;
+    gap: 12px;
+  }
+
+  .hero-img img {
+    width: 100% !important;       /* Full width untuk HP */
+    height: auto;
+    border-radius: 12px;
+  }
+
+  /* Info text */
+  .detail-info {
+    padding: 0;
+  }
+
+  .detail-info h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .detail-info h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .detail-info .price {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .detail-info h4 {
+    font-size: 16px;
+  }
+
+  .detail-info ul li {
+    font-size: 15px;
+    padding: 6px 0;
+  }
+
+  /* Tombol kembali */
+  .back-btn {
+    margin: 25px auto;
+    font-size: 16px;
+    padding: 12px 24px;
+    display: block;
+  }
+}
+
+
