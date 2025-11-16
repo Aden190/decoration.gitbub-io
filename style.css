@@ -1,7 +1,7 @@
 /* ==============================
    STYLE HALAMAN DETAIL PAKET
    TEMA HITAM MODERN ELEGAN
-   ============================== */
+================================ */
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -46,39 +46,32 @@ body {
   width: 85%;
 }
 
-/* Gambar utama */
+/* Gambar utama (DIPERBAIKI, DIGABUNG) */
 .hero-img {
- display: flex;
- justify-content: center;
- align-items: center;
- gap: 32px;                /* jarak antar gambar */
- padding: 60px 20px;
- background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 60px 20px;
+  background: transparent;
 }
 
 .hero-img img {
-  width: auto;
+  width: 80%;
   height: auto;
   object-fit: cover;
   border-radius: 16px;
+  background-color: #111;
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  background-color: #111;
 }
-.hero-img:hover {
-  transform: scale(1.05) translateY(-10px);
+
+.hero-img img:hover {
+  transform: scale(1.05);
   box-shadow: 0 15px 35px rgba(255,255,255,0.15);
-  z-index: 3;
 }
-.hero-img {
-  flex-direction: column;
-  gap: 16px;
-}
-.hero-img img {
-  width: 80%;
-  height: auto;
-  transform:none
-}
+
 /* Info paket */
 .detail-info {
   flex: 1;
@@ -143,24 +136,28 @@ body {
   background-color: #f8d210;
   color: #111;
 }
+
+/* ==============================
+   RESPONSIVE MOBILE
+================================ */
 @media (max-width: 768px) {
 
   /* Header */
   .header {
-    padding: 18px 20px;           /* Diperkecil */
+    padding: 18px 20px;
   }
 
   .header img {
-    width: 75px;                  /* Logo mengecil */
+    width: 75px;
   }
 
   .header h1 {
-    font-size: 17px;              /* Judul mengecil */
+    font-size: 17px;
   }
 
-  /* Container utama */
+  /* Container */
   .detail-container {
-    flex-direction: column;       /* Dari 2 kolom → 1 kolom */
+    flex-direction: column;
     width: 92%;
     padding: 25px 20px;
     gap: 25px;
@@ -168,19 +165,18 @@ body {
     border-radius: 12px;
   }
 
-  /* Gambar utama */
+  /* Gambar */
   .hero-img {
-    padding: 10px 10px;
+    padding: 10px;
     gap: 12px;
   }
 
   .hero-img img {
-    width: 100% !important;       /* Full width untuk HP */
-    height: auto;
+    width: 100% !important;
     border-radius: 12px;
   }
 
-  /* Info text */
+  /* Info */
   .detail-info {
     padding: 0;
   }
@@ -206,10 +202,9 @@ body {
 
   .detail-info ul li {
     font-size: 15px;
-    padding: 6px 0;
   }
 
-  /* Tombol kembali */
+  /* Tombol */
   .back-btn {
     margin: 25px auto;
     font-size: 16px;
@@ -217,5 +212,3 @@ body {
     display: block;
   }
 }
-
-
