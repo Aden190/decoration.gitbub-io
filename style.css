@@ -1,25 +1,24 @@
 /* ==============================
-   STYLE HALAMAN DETAIL PAKET
-   TEMA HITAM MODERN ELEGAN
+   TEMA ABU – PUTIH ELEGAN MODERN
 ================================ */
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #111;
-  color: #f0f0f0;
+  background-color: #f5f5f5;
+  color: #333;
   margin: 0;
   padding: 0;
   line-height: 1.7;
 }
 
-/* Header / Logo */
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 80px;
-  background-color: #000;
-  border-bottom: 1px solid #333;
+  padding: 25px 60px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .header img {
@@ -29,112 +28,110 @@ body {
 .header h1 {
   font-family: 'Playfair Display', serif;
   font-size: 26px;
-  color: #fff;
+  color: #333;
 }
 
-/* Container utama */
+/* Container Utama */
 .detail-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
-  padding: 60px 80px;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1b1b1b 100%);
-  border-radius: 20px;
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
-  margin: 50px auto;
+
+  padding: 50px 60px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.05);
+
+  margin: 45px auto;
   width: 85%;
 }
 
-/* Gambar utama (DIPERBAIKI, DIGABUNG) */
+/* Gambar */
 .hero-img {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   gap: 16px;
-  padding: 60px 20px;
-  background: transparent;
+  padding: 40px 20px;
 }
 
 .hero-img img {
-  width: 80%;
+  width: 85%;
   height: auto;
+  border-radius: 14px;
+  background-color: #f2f2f2;
+
   object-fit: cover;
-  border-radius: 16px;
-  background-color: #111;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+  transition: 0.3s ease;
 }
 
 .hero-img img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 35px rgba(255,255,255,0.15);
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
-/* Info paket */
+/* Info Paket */
 .detail-info {
   flex: 1;
-  padding: 10px 30px;
+  padding: 10px 20px;
 }
 
 .detail-info h2 {
-  font-size: 34px;
-  color: #fff;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
+  font-size: 32px;
+  color: #222;
 }
 
 .detail-info h3 {
-  font-size: 22px;
-  color: #aaa;
+  font-size: 20px;
+  color: #777;
   font-weight: 500;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .detail-info .price {
   font-size: 26px;
   font-weight: bold;
-  color: #fff;
-  margin-bottom: 30px;
+  color: #222;
+  margin-bottom: 25px;
 }
 
 .detail-info h4 {
   font-size: 18px;
-  color: #fff;
+  color: #333;
   margin-top: 25px;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #ddd;
   padding-bottom: 5px;
-}
-
-.detail-info ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
 }
 
 .detail-info ul li {
   padding: 6px 0;
-  color: #ddd;
-  border-bottom: 1px solid #222;
+  color: #555;
+  border-bottom: 1px solid #eee;
 }
 
-/* Tombol kembali */
+/* Tombol Kembali */
 .back-btn {
   display: inline-block;
-  margin: 40px 80px;
+  margin: 35px 60px;
   padding: 12px 25px;
-  background-color: #fff;
-  color: #000;
+
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+
+  color: #333;
+  font-weight: 600;
+
   border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
+
+  transition: 0.25s ease;
 }
 
 .back-btn:hover {
-  background-color: #f8d210;
-  color: #111;
+  background-color: #e9e9e9;
+  border-color: #bfbfbf;
 }
 
 /* ==============================
@@ -142,9 +139,8 @@ body {
 ================================ */
 @media (max-width: 768px) {
 
-  /* Header */
   .header {
-    padding: 18px 20px;
+    padding: 15px 20px;
   }
 
   .header img {
@@ -152,63 +148,41 @@ body {
   }
 
   .header h1 {
-    font-size: 17px;
+    font-size: 18px;
   }
 
-  /* Container */
   .detail-container {
     flex-direction: column;
     width: 92%;
-    padding: 25px 20px;
-    gap: 25px;
+    padding: 22px 18px;
+    gap: 22px;
     margin: 25px auto;
-    border-radius: 12px;
   }
 
-  /* Gambar */
-  .hero-img {
-    padding: 10px;
-    gap: 12px;
-  }
-
+  /* Hanya tampilkan 1 gambar di mobile */
   .hero-img img {
-    width: 100% !important;
-    border-radius: 12px;
+    display: none;
   }
 
-  /* Info */
-  .detail-info {
+  .hero-img img:first-child {
+    display: block;
+    width: 100%;
+  }
+
+  .hero-img {
     padding: 0;
   }
 
-  .detail-info h2 {
-    font-size: 26px;
+  .detail-info h2,
+  .detail-info h3,
+  .price {
     text-align: center;
   }
 
-  .detail-info h3 {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .detail-info .price {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .detail-info h4 {
-    font-size: 16px;
-  }
-
-  .detail-info ul li {
-    font-size: 15px;
-  }
-
-  /* Tombol */
   .back-btn {
-    margin: 25px auto;
-    font-size: 16px;
-    padding: 12px 24px;
     display: block;
+    margin: 25px auto;
+    max-width: 180px;
+    text-align: center;
   }
 }
