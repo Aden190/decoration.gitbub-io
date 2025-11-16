@@ -202,14 +202,26 @@
         color: #000;
         border: 1px solid #000;
     }
-    @media (max-width: 480px) {
-      nav {
-        padding: 1rem 1.2rem; 
-      }
-      nav .logo {
-        font-size: 1.3rem; 
-        letter-spacing: 0.5px;
-      }}
+    
+  @media   (max-width: 768px) {
+    nav {
+      padding: 1rem 1.2rem;  
+    }
+
+    nav .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    .menu-toggle {
+      z-index: 200; 
+    }
+  }
+
+    
+    
   </style>
 </head>
 
@@ -358,4 +370,5 @@
 
 </body>
 </html>
+
 
